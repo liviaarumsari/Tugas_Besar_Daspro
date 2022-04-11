@@ -21,6 +21,4 @@ def ubah_game(data):
         data[baris][4] = harga
     return data
 
-data_baru = ubah_game(data)
-print(data_baru)
     

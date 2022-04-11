@@ -6,5 +6,6 @@ def riwayat(data):
     if (panjang(data) == 0):
         print("Maaf, kamu tidak ada riwayat pembelian game. Ketik perintah beli_game untuk membeli.")
     else:
+        print("Daftar game: ")
         data_baru = buat_data_baru(data,[3])
         print_data(data_baru)
