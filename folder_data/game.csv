@@ -1,4 +1,2 @@
-id;nama;kategori;tahun_rilis;harga;stok
-G001;Python;Action;2013;25000;25
-G002;BNMO;Action;2015;25000;25
-G003;Daspro;Action;2017;25000;25
+G1;dota;moba;2002;300;20
+G2;Python;Action;1990;20000;5

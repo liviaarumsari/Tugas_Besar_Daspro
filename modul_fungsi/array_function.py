@@ -1,3 +1,5 @@
+# Fungsi-fungsi untuk manipulasi array
+
 def split(string1, delimiter):
     N = 1
     for c in string1:
@@ -11,6 +13,9 @@ def split(string1, delimiter):
         else:
             word[i] += c
     return word
+
+def splitchar(word):					# Mengubah kata menjadi huruf
+    return [char for char in word]
 
 def panjang(arr):
     i = 0

@@ -6,5 +6,6 @@ def exit():
         if (opt == "y") or (opt == "Y") or (opt == "n") or (opt == "y"):
             i = True
     if (opt == "y") or (opt == "Y"):
+        # Jalankan fungsi save
         save.save()
 
