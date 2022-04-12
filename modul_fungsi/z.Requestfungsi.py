@@ -1,15 +1,7 @@
 
-# Udah disediain
-def panjang(arr):
-    i = 0
-    for c in arr:
-        i += 1
-    return i
-
-
-# Belum ada
+# Request Tuker
+# Tuker isXmember
 def Exist(arr,data, column):		    # Validasi apakah data ada
-
 	i = 0
 	for i in range(panjang(arr)):
 		LookUp = arr[i][column]
@@ -18,6 +10,7 @@ def Exist(arr,data, column):		    # Validasi apakah data ada
 		else:
 			return False
 
+# Belum ada
 def splitchar(word):					# Mengubah kata menjadi huruf
     return [char for char in word]
 
