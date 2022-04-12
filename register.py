@@ -1,7 +1,7 @@
-from modul_fungsi.array_function import UserValid
-from modul_fungsi.array_function import Exist
+from modul_fungsi.data_function import UserValid
+from modul_fungsi.data_function import Exist
 from modul_fungsi.array_function import panjang
-from modul_fungsi.array_function import userID
+from modul_fungsi.data_function import userID
 
 
 def register(arr):
