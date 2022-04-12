@@ -1,6 +1,6 @@
 from modul_fungsi.array_function import panjang
 
-def CariGame(arr):  # Hanya untuk User
+def search_my_game (arr):  # Hanya untuk User
     Game_Id = input("Masukkan ID Game : ")
     year = input("Masukkan Tahun Rilis Game : ")
 
