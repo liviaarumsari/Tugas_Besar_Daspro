@@ -1,5 +1,5 @@
-from modul_fungsi.array_function import Exist
-from modul_fungsi.array_function import DataLoc
+from modul_fungsi.data_function import Exist
+from modul_fungsi.data_function import DataLoc
 
 
 def ubah_stock(arr):
