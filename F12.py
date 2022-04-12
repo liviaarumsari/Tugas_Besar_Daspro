@@ -1,5 +1,4 @@
 
-from tkinter import E
 from modul_fungsi.array_function import panjang
 
 def Exist(arr,data, column):		    # Validasi apakah data ada
