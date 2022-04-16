@@ -23,6 +23,8 @@ def panjang(arr):
         i += 1
     return i
 
+def append(list, element):
+    list+=[element]
 
 def print_data(data):
     baris = panjang(data)
