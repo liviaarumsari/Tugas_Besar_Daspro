@@ -40,7 +40,9 @@ def beli_game(kepemilikan,user,game):
     elif game[codegame-1][4] > user[id2-1][5]: 
         print('Saldo anda tidak cukup untuk membeli Game tersebut!')
     else: 
+        game[codegame-1][5]=game[codegame-1][5]-1
+        user[id2-1][5]=user[id2-1][5]-game[codegame-1][4]
         kepemilikan=kepemilikan+[pembelian]
-    print_data(kepemilikan)
+    return kepemilikan, user, game
 
 
