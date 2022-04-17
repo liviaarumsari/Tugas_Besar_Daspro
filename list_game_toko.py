@@ -38,7 +38,7 @@ def sortID(data, ind=0):
 
 def list_game_toko (data):
     if currentuser = False:
-        print("Anda belum login. Silahkan login terlebih dahulu.")
+        print("Maaf, anda harus login terlebih dahulu untuk megirim perintah selain 'login'")
     else:
         sort=str(input("Skema sorting : "))
         
