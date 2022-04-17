@@ -2,7 +2,7 @@ from modul_fungsi.array_function import panjang
 
 def search_game_at_store (data):
     if currentuser = False:
-        print("Anda belum login. Login terlebih dahulu.")
+        print("Maaf, anda harus login terlebih dahulu untuk megirim perintah selain 'login'")
     else:
         idgame= input("Masukkan ID Game: ")
         nama = input("Masukkan Nama Game : ")
