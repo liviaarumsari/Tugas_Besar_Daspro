@@ -1,3 +1,4 @@
+ from modul_fungsi.bonus_function import forTictac
  def TicTacToe():
   board = [
     ["-", "-", "-"],
