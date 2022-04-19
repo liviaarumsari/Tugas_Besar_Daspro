@@ -1,4 +1,3 @@
-from modul_fungsi.array_function import panjang
 from modul_fungsi.array_function import tambah
 from modul_fungsi.array_function import pisah
 from modul_fungsi.array_function import enter
@@ -34,3 +33,5 @@ def load():
         print('Selamat Datang di antarmuka "Binomo"')
     else :
         print(f"Folder {args.folder} tidak ditemukan.")
+
+load()

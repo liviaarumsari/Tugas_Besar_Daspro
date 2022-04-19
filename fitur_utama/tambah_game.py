@@ -1,12 +1,10 @@
 from modul_fungsi.array_function import panjang
-from modul_fungsi.csv_function import save_data
 from modul_fungsi.data_function import gameID
 
 def isEmpty(n):
     n != ''
     return n
 
-data= [['G1','dota','moba','2002','300','20']]
 
 def tambah_game(data):
     namaGame=input('Masukkan nama game: ')

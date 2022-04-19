@@ -48,7 +48,7 @@ while (i == False) or (currentuser == False):
     if (opt == "login"):
         username = input("Masukan username: ")
         password = input("Masukan password: ")
-        login(data_user, username, password, currentuser)
+        currentuser = login(data_user, username, password, currentuser)
         i = True
     elif (opt == "help"):
         help(currentuser, "gen")
@@ -59,7 +59,6 @@ while (i == False) or (currentuser == False):
 
 # Setelah berhasil login
 if(isAdmin(data_user, username) == True):
-    cls()
     menu_admin()
     bool_admin = False
     while (bool_admin == False):
@@ -97,7 +96,6 @@ if(isAdmin(data_user, username) == True):
             print("Maaf, perintah yang dimasukkan tidak tersedia.")
 
 else:
-    cls()
     menu_user()
     bool_user = False
     while (bool_user == False):
@@ -107,7 +105,7 @@ else:
         elif (opt2 == "buy_game"):
             data_kepemilikan, data_user, data_game, data_riwayat = buy_game(data_kepemilikan, data_user, data_game, data_riwayat)
         elif (opt2 == "list_game"):
-            list_game(data_game)
+            list_game(username, data_user, data_kepemilikan, data_game)
         elif (opt2 == "search_my_game"):
             search_my_game(data_game)
         elif (opt2 == "list_game_toko"):

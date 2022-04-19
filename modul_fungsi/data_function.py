@@ -57,6 +57,10 @@ def isAdmin(arr,username):				# Cek Apakah Admin
 	else:
 		return False
 
+def getuserID (data, username):
+	for i in range (panjang(data)):
+		if (data[i][1] == username):
+			return data[i][0]
 
 
 

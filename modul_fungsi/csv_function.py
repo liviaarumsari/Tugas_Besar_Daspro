@@ -15,15 +15,6 @@ def load_data(nama_folder,nama_file):
         data_baris = split(line, ";")
         hasil_data += [data_baris]
 
-    # Pastiin perlu pake header atau engga
-    # Menghapus header
-    # hasil_data_baru = []
-    # for i in range (1,array_function.panjang(hasil_data)):
-    #     data_baru_baris = []
-    #     for j in range (array_function.panjang(hasil_data[0])):
-    #             data_baru_baris += [hasil_data[i][j]]
-    #     hasil_data_baru += [data_baru_baris]
-
     return hasil_data
 
 # Matriks to CSV

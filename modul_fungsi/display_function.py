@@ -45,4 +45,3 @@ Bonus game~
 Magic Conch Shell           || Ketik: kerangajaib
 Tic Tac Toe                 || Ketik: tictactoe
     """)
-
