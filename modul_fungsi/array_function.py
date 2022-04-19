@@ -76,19 +76,19 @@ def tambah(arr,string):
 
 def enter(string,char,subchar):
     result=""
-    for word in string:
-        if word==char:
+    for i in string:
+        if i==char:
             result+=subchar
         else:
-            result+=word
+            result+=i
     return result
 
 def pisah(string, delimiter): 
     result = []
     x = ''
-    for word in string :
-        if word != delimiter :
-            x += word
+    for i in string :
+        if i != delimiter :
+            x += i
         else :
             result = tambah(result, x)
             x = ''  
