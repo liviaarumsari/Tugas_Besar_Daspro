@@ -65,7 +65,35 @@ def buat_data_baru(data, hapus_kolom):
         data_baru += [data_baru_baris]
     return data_baru
 
+def tambah(arr,string):
+    a=["*" for i in range(panjang(arr)+1)]
+    for i in range (panjang(arr)+1):
+        if i==panjang(arr):
+            a[i]=string
+        else:
+            a[i]=arr[i]
+    return a
 
+def enter(string,char,subchar):
+    result=""
+    for i in string:
+        if i==char:
+            result+=subchar
+        else:
+            result+=i
+    return result
+
+def pisah(string, delimiter): 
+    result = []
+    x = ''
+    for i in string :
+        if i != delimiter :
+            x += i
+        else :
+            result = tambah(result, x)
+            x = ''  
+    result = (tambah(result, x))
+    return result
 
     
 
