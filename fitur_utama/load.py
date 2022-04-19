@@ -2,6 +2,7 @@ from modul_fungsi.array_function import panjang
 from modul_fungsi.array_function import tambah
 from modul_fungsi.array_function import pisah
 from modul_fungsi.array_function import enter
+import os
 
 import argparse
 parser = argparse.ArgumentParser(description="Tidak ada nama folder yang diberikan!")

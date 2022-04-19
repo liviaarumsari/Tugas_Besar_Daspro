@@ -1,4 +1,4 @@
-from modul_fungsi import array_function
+from modul_fungsi.array_function import split, panjang
 
 # CSV to matriks
 def load_data(nama_folder,nama_file):
@@ -7,12 +7,12 @@ def load_data(nama_folder,nama_file):
     data = file.read()
 
     # Memisahkan tiap baris data csv
-    baris = array_function.split(data, "\n")
+    baris = split(data, "\n")
 
     # Memisahkan antardata yang terpisah dengan ";"
     hasil_data = []
     for line in baris:
-        data_baris = array_function.split(line, ";")
+        data_baris = split(line, ";")
         hasil_data += [data_baris]
 
     # Pastiin perlu pake header atau engga
@@ -29,9 +29,9 @@ def load_data(nama_folder,nama_file):
 # Matriks to CSV
 def save_data(data, nama_folder, nama_file):
     file=open("./%s/%s.csv" % (nama_folder, nama_file), "w")    
-    for i in range(array_function.panjang(data)):
-        for j in range(array_function.panjang(data[0])):
-            if (j == array_function.panjang(data[0])-1):
+    for i in range(panjang(data)):
+        for j in range(panjang(data[0])):
+            if (j == panjang(data[0])-1):
                 file.write(data[i][j])
             else:
                 file.write(data[i][j] + ";")

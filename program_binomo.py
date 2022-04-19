@@ -20,15 +20,24 @@ from modul_fungsi.data_function import isAdmin
 from modul_fungsi.display_function import cls, menu_admin, menu_user, print_home
 
 # Program argaparse untuk akses folder
-nama_folder = "folder_data"                 # Keperluan testing
+import argparse
+import os
+parser = argparse.ArgumentParser(description="Tidak ada nama folder yang diberikan!")
+parser.add_argument("folder", help="Folder Penyimpanan")
+args = parser.parse_args()
 
-# Loading data dari csv
-data_user = load_data(nama_folder, "user")
-data_game = load_data(nama_folder, "game")
-data_kepemilikan = load_data(nama_folder, "kepemilikan")
-data_riwayat = load_data(nama_folder, "riwayat")
+if os.path.exists(args.folder):
+        print("Loading...")
+        # Loading data dari csv
+        data_user = load_data(args.folder, "user")
+        data_game = load_data(args.folder, "game")
+        data_kepemilikan = load_data(args.folder, "kepemilikan")
+        data_riwayat = load_data(args.folder, "riwayat")
+        print('Selamat Datang di antarmuka "Binomo"')
+else :
+    print(f"Folder {args.folder} tidak ditemukan.")
+    
 
-print(data_user)
 # Home BNMO
 print_home()
 i = False
@@ -39,7 +48,7 @@ while (i == False) or (currentuser == False):
     if (opt == "login"):
         username = input("Masukan username: ")
         password = input("Masukan password: ")
-        login(data_user, currentuser, username, password)
+        login(data_user, username, password, currentuser)
         i = True
     elif (opt == "help"):
         help(currentuser, "gen")
@@ -86,7 +95,7 @@ if(isAdmin(data_user, username) == True):
             bool_admin = True
         else:
             print("Maaf, perintah yang dimasukkan tidak tersedia.")
-        cls()
+
 else:
     cls()
     menu_user()
@@ -122,5 +131,5 @@ else:
             bool_user = True
         else:
             print("Maaf, perintah yang dimasukkan tidak tersedia.")
-        cls()
+
 

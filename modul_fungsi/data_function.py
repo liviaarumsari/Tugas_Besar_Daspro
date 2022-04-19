@@ -1,10 +1,10 @@
 # Fungsi untuk pencarian dan validasi data
 
-from modul_fungsi import array_function
+from modul_fungsi.array_function import panjang, splitchar
 
 def Exist(arr,data, column):		    # Validasi apakah data ada
 	i = 0
-	for i in range(array_function.panjang(arr)):
+	for i in range(panjang(arr)):
 		LookUp = arr[i][column]
 		if LookUp == data:
 			return True
@@ -16,20 +16,20 @@ def UserValid(username):			    # Memvalidasi username
 	uppercase = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
 	number = ['1','2','3','4','5','6','7','8','9','0','_','-']
 	
-	letter = array_function.splitchar(username)
+	letter = splitchar(username)
 	count = 0
-	for i in range (array_function.panjang(letter)):
+	for i in range (panjang(letter)):
 		if (letter[i] in lowercase) or (letter[i] in uppercase) or (letter[i] in number) :
 			count += 1
 
-	if count == array_function.panjang(letter):
+	if count == panjang(letter):
 		return True
 	else:
 		return False
 
 def DataLoc(arr, data, column):			# Mencari baris ke berapa lokasi data tersebut berada
 	found = 0
-	for i in range(array_function.panjang(arr)):
+	for i in range(panjang(arr)):
 		if arr[i][column] == data:
 			found = i
 			break	

@@ -1,6 +1,5 @@
 from modul_fungsi.array_function import panjang 
 
-data = [['id', 'username', 'nama', 'password', 'role', 'saldo'], ['001', 'livia123', 'livia', 'haha', 'admin', '50000']]
 
 def login(data_f, username, password, currentuser):
     if currentuser == True:
@@ -17,7 +16,4 @@ def login(data_f, username, password, currentuser):
             if (i == panjang(data_f)-1):
                 print("Password atau username salah atau tidak ditemukan.")
     
-username = input("masukkin oy ")
-passw = input("pw lo apa noh ")
-boolss = False
-login(data, username, passw, boolss)
+
