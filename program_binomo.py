@@ -113,7 +113,7 @@ else:
         elif (opt2 == "search_game_at_store"):
             search_game_at_store(data_game)
         elif (opt2 == "riwayat"):
-            riwayat(data_riwayat)
+            riwayat(username, data_user, data_kepemilikan, data_riwayat)
         elif (opt2 == "help"):
             help(currentuser, "user")
         elif (opt2 == "save"):
