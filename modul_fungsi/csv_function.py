@@ -1,4 +1,4 @@
-import array_function
+from modul_fungsi import array_function
 
 # CSV to matriks
 def load_data(nama_folder,nama_file):

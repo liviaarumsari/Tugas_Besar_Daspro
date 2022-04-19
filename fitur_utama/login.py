@@ -1,14 +1,11 @@
 from modul_fungsi.array_function import panjang 
 
-currentuser = False
-def login(data_f):
-    if currentuser = True:
+data = [['id', 'username', 'nama', 'password', 'role', 'saldo'], ['001', 'livia123', 'livia', 'haha', 'admin', '50000']]
+
+def login(data_f, username, password, currentuser):
+    if currentuser == True:
         print("Sudah login, masukan perintah selanjutnya.")
     else:
-        username= input("Masukan username: ")
-        password= input("Masukan password: ")
-
-
         for i in range(panjang(data_f)):
             if data_f[i][1] == username:
                 if data_f[i][3] == password:
@@ -17,7 +14,10 @@ def login(data_f):
                     break
                 else:
                     print("Password atau username salah atau tidak ditemukan.")
-            if i==panjang(data_f-1):
+            if (i == panjang(data_f)-1):
                 print("Password atau username salah atau tidak ditemukan.")
     
-
+username = input("masukkin oy ")
+passw = input("pw lo apa noh ")
+boolss = False
+login(data, username, passw, boolss)

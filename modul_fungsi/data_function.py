@@ -1,6 +1,6 @@
 # Fungsi untuk pencarian dan validasi data
 
-import array_function
+from modul_fungsi import array_function
 
 def Exist(arr,data, column):		    # Validasi apakah data ada
 	i = 0
@@ -28,14 +28,12 @@ def UserValid(username):			    # Memvalidasi username
 		return False
 
 def DataLoc(arr, data, column):			# Mencari baris ke berapa lokasi data tersebut berada
-	found = -1
+	found = 0
 	for i in range(array_function.panjang(arr)):
 		if arr[i][column] == data:
-			found += i+1
+			found = i
 			break	
-		
-	if found > -1:
-		return found
+	return found
 
 def userID(int):
 	if int<10:
@@ -54,11 +52,11 @@ def gameID(int):
 		return "G" + str(int)
 
 def isAdmin(arr,username):				# Cek Apakah Admin
-	if arr[DataLoc(username,1)][4] == 'admin':
+	if arr[DataLoc(arr, username, 1)][4] == 'admin':
 		return True
 	else:
 		return False
-print(gameID(1))
+
 
 
 

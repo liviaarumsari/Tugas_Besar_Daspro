@@ -1,4 +1,7 @@
-def exit():
+from fitur_utama.save import save
+
+
+def exit(kepemilikan, user, game, riwayat):
     i = False
     while (i == False):
         print("Apakah Anda mau melakukan penyimpanan file yang sudah diubah? (y/n)")
@@ -7,5 +10,5 @@ def exit():
             i = True
     if (opt == "y") or (opt == "Y"):
         # Jalankan fungsi save
-        save.save()
+        save(kepemilikan, user, game, riwayat)
 

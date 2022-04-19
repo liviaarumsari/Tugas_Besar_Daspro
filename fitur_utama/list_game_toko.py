@@ -37,38 +37,35 @@ def sortID(data, ind=0):
     return data
 
 def list_game_toko (data):
-    if currentuser = False:
-        print("Maaf, anda harus login terlebih dahulu untuk megirim perintah selain 'login'")
-    else:
-        sort=str(input("Skema sorting : "))
+    sort=str(input("Skema sorting : "))
+    
+    if sort=="tahun-":
+        x=sortTahunTurun(data, ind=3)
+        y=print_data(x)
+        print(y)
         
-        if sort=="tahun-":
-            x=sortTahunTurun(data, ind=3)
-            y=print_data(x)
-            print(y)
-            
-        elif sort=="tahun+":
-            x=sortTahunNaik(data, ind=3)
-            y=print_data(x)
-            print(y)
-            
-        elif sort=="harga-":
-            x=sortHargaTurun(data, ind=4)
-            y=print_data(x)
-            print(y)
-            
-        elif sort=="harga+":
-            x=sortHargaNaik(data, ind=4)
-            y=print_data(x)
-            print(y)
-            
-        elif sort=="":
-            x=sortID(data, ind=0)
-            y=print_data(x)
-            print(y)
+    elif sort=="tahun+":
+        x=sortTahunNaik(data, ind=3)
+        y=print_data(x)
+        print(y)
+        
+    elif sort=="harga-":
+        x=sortHargaTurun(data, ind=4)
+        y=print_data(x)
+        print(y)
+        
+    elif sort=="harga+":
+        x=sortHargaNaik(data, ind=4)
+        y=print_data(x)
+        print(y)
+        
+    elif sort=="":
+        x=sortID(data, ind=0)
+        y=print_data(x)
+        print(y)
 
-        else:
-            print("Skema sorting tidak valid!")
+    else:
+        print("Skema sorting tidak valid!")
         
 
                 

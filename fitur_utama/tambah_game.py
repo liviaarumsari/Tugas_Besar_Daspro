@@ -8,7 +8,7 @@ def isEmpty(n):
 
 data= [['G1','dota','moba','2002','300','20']]
 
-def tambah_game(data, nama_folder):
+def tambah_game(data):
     namaGame=input('Masukkan nama game: ')
     kategori=input('Masukkan kategori: ')
     tahunRilis=(input('Masukkan tahun rilis: '))
@@ -26,7 +26,6 @@ def tambah_game(data, nama_folder):
         else:
             arr=[gameID(panjang(data)+1),namaGame, kategori, tahunRilis, harga, stok]
             data_baru = data + [arr]
-            print(f'Selamat! Berhasil menambahkan game {namaGame}.')
-            save_data(data_baru, nama_folder, "game")            
+            print(f'Selamat! Berhasil menambahkan game {namaGame}.')       
             return(data_baru)
 
