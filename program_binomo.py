@@ -59,7 +59,7 @@ if(isAdmin(data_user, username) == True):
     while (bool_admin == False):
         opt1 = input(">>> ")
         if (opt1 == "login"):
-            login(data_user, username, password, currentuser)
+            login(data_user, currentuser)
         elif (opt1 == "register"):
             data_user = register(data_user)
         elif (opt1 == "tambah_game"):
@@ -96,7 +96,7 @@ else:
     while (bool_user == False):
         opt2 = input(">>> ")
         if (opt2 == "login"):
-            login(data_user, username, password, currentuser)
+            login(data_user, currentuser)
         elif (opt2 == "buy_game"):
             data_kepemilikan, data_user, data_game, data_riwayat = buy_game(data_kepemilikan, data_user, data_game, data_riwayat)
         elif (opt2 == "list_game"):
