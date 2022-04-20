@@ -45,9 +45,7 @@ username = ""
 while (currentuser == False):
     opt = input("Masukkan pilihan kamu >>> ").lower()
     if (opt == "login"):
-        username = input("Masukan username: ")
-        password = input("Masukan password: ")
-        currentuser = login(data_user, username, password, currentuser)
+        username, currentuser = login(data_user, currentuser)
     elif (opt == "help"):
         help(currentuser, "gen")
     else:
@@ -120,7 +118,7 @@ else:
         elif (opt2 == "tictactoe"):
             TicTacToe()
         elif (opt2 == "register") or (opt2 == "tambah_game") or (opt2 == "ubah_game") or (opt2 == "ubah_stok") or (opt2 == "topup"):
-            print("Maaf, anda harus menjadi user untuk melakukan hal tersebut.")
+            print("Maaf, anda harus menjadi admin untuk melakukan hal tersebut.")
         elif (opt2 == "exit"):
             exit(data_kepemilikan, data_user, data_game, data_riwayat)
             bool_user = True

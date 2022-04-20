@@ -1,4 +1,4 @@
-from modul_fungsi.bonus_function import forTictac
+from modul_fungsi.bonus_function import Board, Coor, CurrentUser, IsInputValid, IsTaken, IsWin, IsiBoard, QuitGame
 def TicTacToe():
   board = [
     ["-", "-", "-"],
