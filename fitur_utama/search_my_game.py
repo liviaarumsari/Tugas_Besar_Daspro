@@ -1,5 +1,5 @@
 from modul_fungsi.array_function import panjang
-from modul_fungsi.array_function import Exist
+from modul_fungsi.data_function import Exist
 from modul_fungsi.data_function import UserGame
 from modul_fungsi.array_function import formatCariGame
 
