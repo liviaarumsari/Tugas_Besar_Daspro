@@ -62,6 +62,12 @@ def getuserID (data, username):
 		if (data[i][1] == username):
 			return data[i][0]
 
+def UserGame(user_Id):                  # File kepemilikan.csv
+    new_arr = []
+    for i in range(panjang(Data3)):
+        if Data3[i][1] == user_Id:
+            new_arr += [Data3[i][0]]
+    return new_arr
 
 
 
