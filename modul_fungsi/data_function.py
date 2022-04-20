@@ -57,10 +57,21 @@ def isAdmin(arr,username):				# Cek Apakah Admin
 	else:
 		return False
 
-def getuserID (data, username):
+def getuserID (data, username):			# Mendapatkan user ID dari username
 	for i in range (panjang(data)):
 		if (data[i][1] == username):
 			return data[i][0]
+
+def data_game_user(username, user, kepemilikan):		# Membuat array game ID yang dimiliki user
+	g_user = []
+	id_user = getuserID(user, username)
+	for i in range (panjang(kepemilikan)):
+		if (kepemilikan[i][1] == id_user):
+			game_id = kepemilikan[i][0]
+			g_user += [game_id]
+	return g_user
+
+
 
 def UserGame(user_Id):                  # File kepemilikan.csv
     new_arr = []
