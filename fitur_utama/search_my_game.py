@@ -1,44 +1,44 @@
-from modul_fungsi.array_function import panjang
-from modul_fungsi.data_function import Exist
-from modul_fungsi.data_function import UserGame
-from modul_fungsi.array_function import formatCariGame
+from modul_fungsi.array_function import panjang, formatCariGame
+from modul_fungsi.data_function import Exist, data_game_user
 
 
-def CariGame(arr, user_Id):
+def search_my_game(username, user, kepemilikan, game):
     
     Game_Id = input("Masukkan ID Game : ")
     year = input("Masukkan Tahun Rilis Game : ")
 
+    game_user = data_game_user(username, user, kepemilikan)
+
     filtered_arr = []
     if Game_Id != "" and year == "":                # Hanya input Game id 
-        if Exist(arr, Game_Id, 0) == True:        # Cek apakah game ada di toko
-            if Game_Id in UserGame(user_Id):        # Cek apakah user punya game itu
-                for i in range(panjang(arr)):
-                    if arr[i][0] == Game_Id:      
-                        filtered_arr += [arr[i]]     # Buat array yang sudah terfilter sesuai kriteria input user 
+        if Exist(game, Game_Id, 0) == True:        # Cek apakah game ada di toko
+            if Game_Id in game_user:        # Cek apakah user punya game itu
+                for i in range(panjang(game)):
+                    if game[i][0] == Game_Id:      
+                        filtered_arr += [game[i]]     # Buat array yang sudah terfilter sesuai kriteria input user 
 
 
     elif Game_Id == "" and year != "":              # Hanya input tahun
-        if Exist(arr, year, 3) == True:
+        if Exist(game, year, 3) == True:
             temp_arr = []                               # Array berisi spek dengan tahun tertentu
-            for i in range(panjang(arr)):
-                if arr[i][3] == year:
-                    temp_arr += [arr[i]]
+            for i in range(panjang(game)):
+                if game[i][3] == year:
+                    temp_arr += [game[i]]
                     
             if not(temp_arr == []):                             # Cek apakah game ada di toko
                 for i in range(panjang(temp_arr)):
-                    if temp_arr[i][0] in UserGame(user_Id):     # Cek apakah user punya game itu     
-                        filtered_arr += [arr[i]]              # Buat array yang sudah terfilter sesuai kriteria input user
+                    if temp_arr[i][0] in game_user:     # Cek apakah user punya game itu     
+                        filtered_arr += [game[i]]              # Buat array yang sudah terfilter sesuai kriteria input user
 
 
     elif Game_Id != "" and year != "":              # input Game id + tahun
-        if Exist(arr, year, 3) == True and Exist(arr, Game_Id, 0) == True:
+        if Exist(game, year, 3) == True and Exist(game, Game_Id, 0) == True:
             temp_arr1 = []                      # Array berisi spek dengan tahun tertentu
             temp_arr2 = []                      # Array berisi spek dengan tahun dan game id tertentu
 
-            for i in range(panjang(arr)):
-                if arr[i][3] == year:
-                    temp_arr1 += [arr[i]]
+            for i in range(panjang(game)):
+                if game[i][3] == year:
+                    temp_arr1 += [game[i]]
             
             for i in range(panjang(temp_arr1)):
                 if temp_arr1[i][0] == Game_Id:
@@ -46,11 +46,11 @@ def CariGame(arr, user_Id):
 
             if not(temp_arr2 == []):                             # Cek apakah game ada di toko
                 for i in range(panjang(temp_arr2)):
-                    if temp_arr2[i][0] in UserGame(user_Id):     # Cek apakah user punya game itu     
-                        filtered_arr += [arr[i]]              # Buat array yang sudah terfilter sesuai kriteria input user
+                    if temp_arr2[i][0] in game_user:     # Cek apakah user punya game itu     
+                        filtered_arr += [game[i]]              # Buat array yang sudah terfilter sesuai kriteria input user
 
 
     if filtered_arr == []:
         return "Tidak ada game pada inventory-mu yang memenuhi kriteria"
     else:
-        return formatCariGame(filtered_arr)  
+        return formatCariGame(filtered_arr)
