@@ -40,19 +40,16 @@ else :
 
 # Home BNMO
 print_home()
-i = False
 currentuser = False
 username = ""
-while (i == False) or (currentuser == False):
+while (currentuser == False):
     opt = input("Masukkan pilihan kamu >>> ").lower()
     if (opt == "login"):
         username = input("Masukan username: ")
         password = input("Masukan password: ")
         currentuser = login(data_user, username, password, currentuser)
-        i = True
     elif (opt == "help"):
         help(currentuser, "gen")
-        i = True
     else:
         print("Maaf, anda harus login terlebih dahulu untuk mengirim perintah selain “login”")
 
@@ -107,7 +104,7 @@ else:
         elif (opt2 == "list_game"):
             list_game(username, data_user, data_kepemilikan, data_game)
         elif (opt2 == "search_my_game"):
-            search_my_game(data_game)
+            search_my_game(username, data_user, data_kepemilikan, data_game)
         elif (opt2 == "list_game_toko"):
             list_game_toko(data_game)
         elif (opt2 == "search_game_at_store"):
