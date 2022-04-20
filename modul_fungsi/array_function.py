@@ -95,8 +95,14 @@ def pisah(string, delimiter):
     result = (tambah(result, x))
     return result
 
-    
 
+def maxchar(arr, column):
+    max = 0
+    for i in range(panjang(arr)):
+        long = panjang(splitchar(str(arr[i][column])))  # Hitung panjang words yang diubah jadi array
+        if long > max:
+            max = long
+    return max
 
 
 #
