@@ -8,9 +8,7 @@ def removeRow(data):
     return data_baru
 
 def topup(user):   #user=data
-    print(user)
-    user=removeRow(user)
-    print(user)
+
     username=input('Masukkan username: ')
 
     topup=int(input('Masukkan saldo: '))
@@ -27,6 +25,6 @@ def topup(user):   #user=data
                 print(f'Top up berhasil. Saldo {username} bertambah menjadi {int(user[i][5]) + topup}')
                 user[i][5]= int(user[i][5])+ topup
                 user[i][5]= str(user[i][5])
-                print(user)
+                
     return user
        
