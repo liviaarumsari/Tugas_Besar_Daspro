@@ -17,9 +17,7 @@ def removeRow(data):
     return data_baru
 
 def tambah_game(data):
-    print(data)
     data=removeRow(data)
-    print(data)
     namaGame=input('Masukkan nama game: ')
     kategori=input('Masukkan kategori: ')
     tahunRilis=(input('Masukkan tahun rilis: '))
@@ -37,7 +35,6 @@ def tambah_game(data):
         else:
             arr=[gameID(panjang(data)),namaGame,kategori,tahunRilis,harga,stok]
             data = data + [arr]
-            print(f'Selamat! Berhasil menambahkan game {namaGame}.') 
-            print(data)      
+            print(f'Selamat! Berhasil menambahkan game {namaGame}.')       
             return(data)
 
