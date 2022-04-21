@@ -8,7 +8,7 @@ def removeRow(data):
     return data_baru
 
 def topup(user):   #user=data
-
+    user=removeRow(user)
     username=input('Masukkan username: ')
 
     topup=int(input('Masukkan saldo: '))
