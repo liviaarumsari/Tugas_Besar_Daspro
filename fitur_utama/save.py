@@ -13,10 +13,16 @@ def save_data(data, nama_folder, nama_file):
     file=open(f"{nama_folder}"+f"/{nama_file}.csv", "w")    
     for i in range(panjang(data)):
         for j in range(panjang(data[0])):
-            if (j == panjang(data[0])-1):
-                file.write(str(data[i][j])+'\n')
+            if (i == panjang(data) - 1):
+                if (j == panjang(data[0])-1):
+                    file.write(str(data[i][j]))
+                else:
+                    file.write(str(data[i][j]+';'))
             else:
-                file.write(str(data[i][j]+';'))
+                if (j == panjang(data[0])-1):
+                    file.write(str(data[i][j])+'\n')
+                else:
+                    file.write(str(data[i][j]+';'))
     file.close()
 
 def removeRow(data):
