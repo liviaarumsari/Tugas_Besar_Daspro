@@ -1,27 +1,9 @@
 from modul_fungsi.array_function import print_data
 from modul_fungsi.array_function import panjang
+from modul_fungsi.data_function import DataLoc
+from modul_fungsi.data_function import userID
+from modul_fungsi.array_function import splitchar
 
-
-def splitchar(word):					# Mengubah kata menjadi huruf
-    return [char for char in word]
-
-def DataLoc(arr, data, column):			# Mencari baris ke berapa lokasi data tersebut berada
-	found = -1
-	for i in range(panjang(arr)):
-		if arr[i][column] == data:
-			found += i+1
-			break	
-		
-	if found > -1:
-		return found
-
-def userID(int):
-	if int<10:
-		return '00' + str(int)
-	elif 10 <=int <= 99:
-		return '0'+ str(int)
-	else:
-		return str(int)
 
 def removeRow(data):
     data_baru=[]
@@ -36,12 +18,27 @@ def buy_game(kepemilikan,user,game,riwayat,username):
     riwayat=removeRow(riwayat)
     game=removeRow(game)
     beli=(input('Masukkan id game: '))
+    while beli=='':
+        print('Masukkan kosong')
+        beli=(input('Masukkan id game: '))
     id= (DataLoc(user,username,1))
     split=splitchar(beli)
+    i=0
+    while i==0:
+        if panjang(split)<4 or panjang(split)>4:
+            print('Masukkan invalid')
+            beli=(input('Masukkan id game: '))
+            split=splitchar(beli)
+        elif split[0]!='G' or split[1] not in ('0123456') or split[2] not in ('0123456')or split[3] not in ('0123456'):
+            print('Masukkan invalid')
+            beli=(input('Masukkan id game: '))
+            split=splitchar(beli)
+        else:
+            i=1
     pembelian=[beli,userID(id)]
     if split[1] == '0' and split[2]=='0':
         codegame=int(split[3])
-    elif split[1]=='0' and split[2]!=0:
+    elif split[1]=='0' and split[2]!='0':
         codegame=int(split[2]+split[3])
     else:
         codegame=int(split[1]+split[2]+split[3])
@@ -50,6 +47,7 @@ def buy_game(kepemilikan,user,game,riwayat,username):
     for j in range(panjang(kepemilikan)):
         if pembelian==kepemilikan[j]:
             Exist=True
+
     if codegame>=panjang(game):
         print('Game tidak ditemukan')
     elif Exist==True:          
