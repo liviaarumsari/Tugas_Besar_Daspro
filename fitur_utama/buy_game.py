@@ -45,14 +45,14 @@ def buy_game(kepemilikan,user,game,riwayat,username):
         codegame=int(split[2]+split[3])
     else:
         codegame=int(split[1]+split[2]+split[3])
-
     Exist=False
 
     for j in range(panjang(kepemilikan)):
         if pembelian==kepemilikan[j]:
             Exist=True
-
-    if Exist==True:          
+    if codegame>=panjang(game):
+        print('Game tidak ditemukan')
+    elif Exist==True:          
         print('Anda sudah memiliki game tersebut')
     elif int(game[codegame][5])==0: 
         print('Stok Game tersebut sedang habis!')
@@ -64,9 +64,6 @@ def buy_game(kepemilikan,user,game,riwayat,username):
         kepemilikan=kepemilikan+[pembelian]
         riwayat=riwayat+[[beli,game[codegame][1],game[codegame][4],userID(id),2022]] #input tahun beli msh manual
         print('Game',f'"{game[codegame][1]}"','berhasil dibeli')
-
-
-
 
     return (kepemilikan,user,game,riwayat)
 
