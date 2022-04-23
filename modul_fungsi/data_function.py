@@ -82,14 +82,16 @@ def validasi_tahun(tahun):				# Menerima input berupa string tahun dan melakukan
 			tahun = input("Masukkan tahun rilis: ")
 
 def validasi_harga(harga, pesan_error, pesan_input):				# Menerima input berupa string harga dan melakukan looping jika input harga tidak valid, harga valid berupa angka
-	# Menghapus tanda baca titik yang mungkin diinput saat memasukkan harga
-	harga_baru = ""
-	for i in range (panjang(harga)):
-		c = harga[i]
-		if (c != "."):
-			harga_baru += c
 	i = False
 	while (i == False):
+		# Menghapus tanda baca titik yang mungkin diinput saat memasukkan harga
+		harga_baru = ""
+		for i in range (panjang(harga)):
+			c = harga[i]
+			if (c != "."):
+				harga_baru += c
+		
+		# Mengecek apakah input hanya berupa angka
 		bool_int = True
 		try: 
 			int(harga_baru)
@@ -102,5 +104,3 @@ def validasi_harga(harga, pesan_error, pesan_input):				# Menerima input berupa 
 		else:
 			print(pesan_error)
 			harga = input(pesan_input)			
-
-

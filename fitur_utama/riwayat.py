@@ -1,7 +1,7 @@
 from modul_fungsi.array_function import print_data
 from modul_fungsi.array_function import panjang
 from modul_fungsi.array_function import buat_data_baru
-from modul_fungsi.data_function import data_game_user
+from modul_fungsi.data_function import data_game_user, getuserID
 
 def riwayat(username, user, kepemilikan, riwayat):
     # Membuat array game ID yang dimiliki user
@@ -11,9 +11,10 @@ def riwayat(username, user, kepemilikan, riwayat):
         print("Maaf, kamu tidak memiliki game. Ketik perintah buy_game untuk membeli.")
     else:
         riwayat_user = []
+        user_id = getuserID(user, username)
         for i in range (panjang(game_user)):
             for j in range (panjang(riwayat)):
-                if (game_user[i] == riwayat[j][0]):
+                if (game_user[i] == riwayat[j][0]) and (riwayat[j][3] == user_id):
                     riwayat_user += [riwayat[j]]
 
         if (panjang(riwayat_user) == 0):
