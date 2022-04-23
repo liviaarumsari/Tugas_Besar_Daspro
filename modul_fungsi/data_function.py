@@ -70,6 +70,37 @@ def data_game_user(username, user, kepemilikan):		# Membuat array game ID yang d
 			g_user += [game_id]
 	return g_user
 
+def validasi_tahun(tahun):				# Menerima input berupa string tahun dan melakukan looping jika input tahun tidak valid, tahun valid 1900 <= tahun <= 2022
+	i = False
+	while (i == False):
+		if (panjang(tahun) == 4):
+			if (1900 <= int(tahun) <= 2022):
+				i = True
+				return tahun					# Mengembalikan nilai tahun yang sudah valid
+		else:
+			print("Masukan tahun tidak valid!")
+			tahun = input("Masukkan tahun rilis: ")
 
+def validasi_harga(harga, pesan_error, pesan_input):				# Menerima input berupa string harga dan melakukan looping jika input harga tidak valid, harga valid berupa angka
+	# Menghapus tanda baca titik yang mungkin diinput saat memasukkan harga
+	harga_baru = ""
+	for i in range (panjang(harga)):
+		c = harga[i]
+		if (c != "."):
+			harga_baru += c
+	i = False
+	while (i == False):
+		bool_int = True
+		try: 
+			int(harga_baru)
+		except ValueError: 
+			bool_int = False
+		if (bool_int == True):
+			i = True
+			harga_valid = str(int(harga_baru))
+			return harga_valid					# Mengembalikan nilai harga yang sudah valid
+		else:
+			print(pesan_error)
+			harga = input(pesan_input)			
 
 

@@ -1,7 +1,9 @@
-from modul_fungsi.array_function import panjang 
+from modul_fungsi.array_function import panjang
+from modul_fungsi.display_function import cls 
 
 
 def login(data_f, currentuser):
+    cls()
     if currentuser == True:
         print("Sudah login, masukan perintah selanjutnya.")
     else:

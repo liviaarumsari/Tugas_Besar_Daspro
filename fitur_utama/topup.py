@@ -1,4 +1,5 @@
 from modul_fungsi.array_function import panjang
+from modul_fungsi.data_function import validasi_harga
 
 def isEmpty(n):
     if n == '':
@@ -23,6 +24,7 @@ def topup(user):   #user=data
         username=input('Masukkan username: ')
         topup=(input('Masukkan saldo: '))
 
+    topup = validasi_harga(topup, "Masukan saldo tidak valid. Silahkan ulangi pengisian saldo", "Masukkan saldo: ")
     for i in range (panjang(user)):
         if user[i][1] == username:
             if (int(user[i][5]) + int(topup))<0:

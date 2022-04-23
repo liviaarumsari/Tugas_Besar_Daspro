@@ -1,5 +1,5 @@
 from modul_fungsi.array_function import panjang
-from modul_fungsi.data_function import gameID
+from modul_fungsi.data_function import gameID, validasi_harga, validasi_tahun
 
 def isEmpty(n):
     if n == '':
@@ -33,6 +33,8 @@ def tambah_game(data):
             harga=(input('Masukkan harga: '))
             stok=(input('Masukkan stok awal: '))
         else:
+            tahunRilis = validasi_tahun(tahunRilis)
+            harga = validasi_harga(harga, "Masukan harga tidak valid. Silahkan ulangi pengisian harga", "Masukkan harga: ")
             arr=[gameID(panjang(data)),namaGame,kategori,tahunRilis,harga,stok]
             data = data + [arr]
             print(f'Selamat! Berhasil menambahkan game {namaGame}.')       
