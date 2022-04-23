@@ -23,7 +23,7 @@ def intID(idgame):
     int_start=-1
     found=False
 
-    for i in range(len(str(idgame))):
+    for i in range(panjang(str(idgame))):
         c=idgame[i]
         int_start+=1
         if c>="0" and c<="9":
