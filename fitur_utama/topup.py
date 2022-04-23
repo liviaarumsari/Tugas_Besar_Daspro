@@ -15,9 +15,11 @@ def removeRow(data):
 
 def topup(user):   #user=data
     user=removeRow(user)
-    username=''
-    topup=''
-    while not isEmpty(user) or not isEmpty(topup):
+    username = input('Masukkan username: ')
+    topup = input('Masukkan saldo: ')
+    while not isEmpty(username) or not isEmpty(topup):
+        print('Mohon lengkapi data')
+        print()
         username=input('Masukkan username: ')
         topup=(input('Masukkan saldo: '))
 
