@@ -10,6 +10,7 @@ def login(data_f, currentuser):
         for i in range(panjang(data_f)):
             if data_f[i][1] == username:
                 if data_f[i][3] == password:
+                    print()
                     print("Halo {}!, Selamat datang di 'Binomo'.".format(data_f[i][2]))
                     return username, True #tandanya udah login
                 else:
