@@ -51,6 +51,6 @@ def search_my_game(username, user, kepemilikan, game):
 
 
     if filtered_arr == []:
-        return "Tidak ada game pada inventory-mu yang memenuhi kriteria"
+        print("Tidak ada game pada inventory-mu yang memenuhi kriteria")
     else:
-        return formatCariGame(filtered_arr)
+        print(formatCariGame(filtered_arr))
