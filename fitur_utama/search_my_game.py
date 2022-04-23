@@ -1,6 +1,11 @@
 from modul_fungsi.array_function import panjang, formatCariGame
 from modul_fungsi.data_function import Exist, data_game_user
 
+def game_owned(game_id, data):
+    for i in range(panjang(data)):
+        if data[i] == game_id:
+            return True
+    return False
 
 def search_my_game(username, user, kepemilikan, game):
     
@@ -12,7 +17,7 @@ def search_my_game(username, user, kepemilikan, game):
     filtered_arr = []
     if Game_Id != "" and year == "":                # Hanya input Game id 
         if Exist(game, Game_Id, 0) == True:        # Cek apakah game ada di toko
-            if Game_Id in game_user:        # Cek apakah user punya game itu
+            if game_owned(Game_Id, game_user) == True:        # Cek apakah user punya game itu
                 for i in range(panjang(game)):
                     if game[i][0] == Game_Id:      
                         filtered_arr += [game[i]]     # Buat array yang sudah terfilter sesuai kriteria input user 
@@ -27,7 +32,7 @@ def search_my_game(username, user, kepemilikan, game):
                     
             if not(temp_arr == []):                             # Cek apakah game ada di toko
                 for i in range(panjang(temp_arr)):
-                    if temp_arr[i][0] in game_user:     # Cek apakah user punya game itu     
+                    if game_owned(temp_arr[i][0], game_user) == True:     # Cek apakah user punya game itu     
                         filtered_arr += [game[i]]              # Buat array yang sudah terfilter sesuai kriteria input user
 
 
@@ -46,7 +51,7 @@ def search_my_game(username, user, kepemilikan, game):
 
             if not(temp_arr2 == []):                             # Cek apakah game ada di toko
                 for i in range(panjang(temp_arr2)):
-                    if temp_arr2[i][0] in game_user:     # Cek apakah user punya game itu     
+                    if game_owned(temp_arr2[i][0], game_user) == True:     # Cek apakah user punya game itu     
                         filtered_arr += [game[i]]              # Buat array yang sudah terfilter sesuai kriteria input user
 
 
