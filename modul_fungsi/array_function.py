@@ -35,8 +35,8 @@ def print_data(data):
     for i in range (kolom):
         pjg_kolom = 0
         for j in range (baris):
-            if(panjang(data[j][i]) > pjg_kolom):
-                pjg_kolom = panjang(data[j][i])
+            if(panjang(str(data[j][i])) > pjg_kolom):
+                pjg_kolom = panjang(str(data[j][i]))
         pjg_maks += [pjg_kolom]
 
     for i in range (baris):

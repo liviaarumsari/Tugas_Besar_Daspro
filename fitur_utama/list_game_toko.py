@@ -3,35 +3,35 @@ from modul_fungsi.array_function import print_data
 
 def sortTahunNaik(data, ind=3):
     for i in range(panjang(data)):
-        for j in range(0,(panjang(data)-1-i)):
+        for j in range(1,(panjang(data)-1-i)):
             if int(data[j][ind]) > int(data[j+1][ind]):
                 data[j],data[j+1] = data[j+1], data[j]
     return data
 
 def sortTahunTurun(data, ind=3):
     for i in range(panjang(data)):
-        for j in range(0,(panjang(data)-1-i)):
+        for j in range(1,(panjang(data)-1-i)):
             if int(data[j+1][ind]) > int(data[j][ind]):
                 data[j],data[j+1] = data[j+1], data[j]
     return data
 
 def sortHargaNaik(data, ind=4):
     for i in range(panjang(data)):
-        for j in range(0,(panjang(data)-1-i)):
+        for j in range(1,(panjang(data)-1-i)):
             if int(data[j][ind]) > int(data[j+1][ind]):
                 data[j],data[j+1] = data[j+1], data[j]
     return data
 
 def sortHargaTurun(data, ind=4):
     for i in range(panjang(data)):
-        for j in range(0,(panjang(data)-1-i)):
+        for j in range(1,(panjang(data)-1-i)):
             if int(data[j+1][ind]) > int(data[j][ind]):
                 data[j],data[j+1] = data[j+1], data[j]
     return data
 
 def sortID(data, ind=0):
     for i in range(panjang(data)):
-        for j in range(0,(panjang(data)-1-i)):
+        for j in range(1,(panjang(data)-1-i)):
             if int(data[j][ind]) > int(data[j+1][ind]):
                 data[j],data[j+1] = data[j+1], data[j]
     return data
