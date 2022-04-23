@@ -258,4 +258,4 @@ def search_game_at_store(data):
                                         print (f"{count}. {row[0]} | {row[1]} | {row[4]} | {row[3]} | {row[2]} | {row[5]} ")
                                         count = count+1
             if count == 1:
-                print("Tidak ada game pada inventory-mu yang memenuhi kriteria.")
+                print("Tidak ada game pada toko yang memenuhi kriteria.")
