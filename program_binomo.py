@@ -1,3 +1,5 @@
+
+from fitur_utama.load import load
 from fitur_utama.register import register
 from fitur_utama.login import login
 from fitur_utama.tambah_game import tambah_game
@@ -26,17 +28,20 @@ parser = argparse.ArgumentParser(description="Tidak ada nama folder yang diberik
 parser.add_argument("folder", help="Folder Penyimpanan")
 args = parser.parse_args()
 
+data_user = []
+data_game = []
+data_kepemilikan = []
+data_riwayat = []
+
 if os.path.exists(args.folder):
-        print("Loading...")
-        # Loading data dari csv
-        data_user = load_data(args.folder, "user")
-        data_game = load_data(args.folder, "game")
-        data_kepemilikan = load_data(args.folder, "kepemilikan")
-        data_riwayat = load_data(args.folder, "riwayat")
-        print('Selamat Datang di antarmuka "Binomo"')
+    print("Loading...")
+    data_user = load(args.folder, "user")
+    data_game = load(args.folder, "game")
+    data_kepemilikan = load(args.folder, "kepemilikan")
+    data_riwayat = load(args.folder, "riwayat")
+    print('Selamat Datang di antarmuka "Binomo"')
 else :
     print(f"Folder {args.folder} tidak ditemukan.")
-    
 
 # Home BNMO
 print_home()
