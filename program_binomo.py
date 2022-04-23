@@ -18,7 +18,7 @@ from fitur_utama.topup import topup
 from fitur_bonus.kerangajaib import kerangajaib
 from fitur_bonus.TicTacToe import TicTacToe
 from modul_fungsi.data_function import isAdmin
-from modul_fungsi.display_function import cls, menu_admin, menu_user, print_home
+from modul_fungsi.display_function import menu_admin, menu_user, print_home
 
 # Program argaparse untuk akses folder
 import argparse
