@@ -1,3 +1,10 @@
 id;nama;kategori;tahun_rilis;harga;stok
-G001;dota;moba;2002;300;20
-G002;Python;Action;1990;20000;5
+G001;dota;MOBA;2002;300;20
+G002;Python;Programming;1990;20000;5
+G045;Harvest Moon;RPG;1998;50000;10
+G004;Choices;Mini Games;2015;2000;0
+G027;Among Us;Mini Games;2021;99000;15
+G006;Flappy Bird;Mini Games;1990;100;3
+G015;PUBG;FPS;2005;49000;2
+G008;C++;Programming;1975;10000;9
+G032;Skyrim;RPG;2001;150000;7
