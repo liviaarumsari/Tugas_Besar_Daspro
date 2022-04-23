@@ -8,6 +8,8 @@ def search_game_at_store (data):
     kategori = input("Masukkan Kategori Game : ")
     tahun = input("Masukkan Tahun Rilis Game : ")
 
+    fin = []
+
     if idgame=="" and nama=="" and harga=="" and kategori=="" and tahun=="":
         for i in range(panjang(data)):
             fin=data
@@ -146,5 +148,5 @@ def search_game_at_store (data):
         for i in range(panjang(data)):
             if data[i][0] == idgame and data[i][1]==nama and data[i][4]==harga and data[i][2]==kategori and data[i][3]==tahun:
                 fin += [data[i]]
-
+    print("Daftar game pada toko yang memenuhi kriteria:")
     print_data(fin)

@@ -102,7 +102,7 @@ else:
         if (opt2 == "login"):
             login(data_user, currentuser)
         elif (opt2 == "buy_game"):
-            data_kepemilikan, data_user, data_game, data_riwayat = buy_game(data_kepemilikan, data_user, data_game, data_riwayat)
+            data_kepemilikan, data_user, data_game, data_riwayat = buy_game(data_kepemilikan, data_user, data_game, data_riwayat, username)
         elif (opt2 == "list_game"):
             list_game(username, data_user, data_kepemilikan, data_game)
         elif (opt2 == "search_my_game"):

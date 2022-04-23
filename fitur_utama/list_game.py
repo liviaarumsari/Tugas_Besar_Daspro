@@ -9,15 +9,15 @@ def list_game(username, user, kepemilikan, game):
         print("Maaf, kamu belum membeli game. Ketik perintah buy_game untuk beli.")
     else:
         # Menyusun data game yang hanya dimiliki user
-        data_game_user = []
+        data_g_user = []
         for i in range (panjang(game_user)):
             for j in range (panjang(game)):
                 if (game_user[i] == game[j][0]):
-                    data_game_user += [game[j]]
+                    data_g_user += [game[j]]
 
         # Print data game
         print("Daftar game: ")
-        data_baru = buat_data_baru(data_game_user,[5])
+        data_baru = buat_data_baru(data_g_user,[5])
         print_data(data_baru)
 
 
