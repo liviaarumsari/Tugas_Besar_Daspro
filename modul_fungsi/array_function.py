@@ -42,7 +42,7 @@ def print_data(data):
     for i in range (baris):
         print(i+1, ". ", end="")
         for j in range (kolom):
-            print(data[i][j], " "*(pjg_maks[j] - panjang(data[i][j])), end="")
+            print(data[i][j], " "*(pjg_maks[j] - panjang(str(data[i][j]))), end="")
             if(j < kolom-1):
                 print("| ", end="")
         print()
