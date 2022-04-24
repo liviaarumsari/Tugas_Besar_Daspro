@@ -36,6 +36,5 @@ def topup(user):   #user=data
                 print(f'Top up berhasil. Saldo {username} bertambah menjadi {int(user[i][5]) + int(topup)}')
                 user[i][5]= int(user[i][5])+ int(topup)
                 user[i][5]= str(user[i][5])
-                print(user)
     return user
        
